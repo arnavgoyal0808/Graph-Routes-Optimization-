@@ -7,7 +7,12 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors({
-  origin: ['https://logichain-frontend.vercel.app', 'http://localhost:3000', 'http://localhost:3001'],
+  origin: [
+    'https://logichain-frontend.vercel.app',
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'http://localhost:8081'   // <-- allow local React dev server
+  ],
   credentials: true
 }));
 app.use(express.json());
